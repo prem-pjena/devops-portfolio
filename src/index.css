@@ -1,13 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌐 Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  @apply bg-black text-white font-sans;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* 🔤 Typography Improvements */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold tracking-tight;
+}
+
+p {
+  @apply leading-relaxed;
+}
+
+a {
+  @apply transition duration-200 ease-in-out;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  @apply text-green-400 bg-gray-800 p-1 rounded;
+}
+
+/* 🌟 Custom Utility Example */
+.section-title {
+  @apply text-4xl font-bold text-center mb-8;
 }

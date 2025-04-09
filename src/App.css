@@ -1,7 +1,23 @@
-.App {
-  text-align: center;
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* App Container */
+.App {
+  background-color: #121212; /* Dark theme */
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Logo Styles */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,6 +29,7 @@
   }
 }
 
+/* Header Styles */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -26,6 +43,137 @@
 
 .App-link {
   color: #61dafb;
+}
+
+/* Lottie Animation Container */
+.lottie-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Section Styling */
+section {
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+section#hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+.navbar a {
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #61dafb;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  background-color: #1f1f1f;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 12px 25px;
+  background-color: #61dafb;
+  color: #282c34;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #5a80c7;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #282c34;
+  text-align: center;
+  padding: 20px 0;
+  color: #777;
+}
+
+footer a {
+  color: #61dafb;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .App-header {
+    font-size: 16px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+  }
+
+  .contact-form button {
+    padding: 10px 20px;
+  }
+
+  section#hero {
+    flex-direction: column;
+    padding: 30px 0;
+  }
 }
 
 @keyframes App-logo-spin {
