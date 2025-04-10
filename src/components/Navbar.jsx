@@ -1,5 +1,3 @@
-// src/components/Navbar.jsx
-
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -16,7 +14,7 @@ const Navbar = () => {
           className="text-2xl font-bold"
           whileHover={{ scale: 1.05, color: "#38bdf8" }}
         >
-          Prem ⚙️
+          DevOps Engineer ⚙️
         </motion.h1>
         <div className="space-x-6 text-sm md:text-base">
           <motion.a whileHover={{ scale: 1.1 }} href="#hero" className="hover:text-blue-400 transition">Home</motion.a>

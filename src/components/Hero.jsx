@@ -1,24 +1,24 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Lottie from "react-lottie";
-import animationData from "../assets/lottie-animation.json";
+import { FaCog } from "react-icons/fa"; // Importing a gear icon for DevOps animation
 
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-gray-900 text-white px-4 relative overflow-hidden">
-      {/* Responsive Lottie Animation */}
+      {/* DevOps Icon Animation */}
       <div className="absolute inset-0 z-0 flex justify-center items-center opacity-20 pointer-events-none">
-        <Lottie
-          options={{
-            animationData: animationData,
-            loop: true,
-            autoplay: true,
-          }}
-          height="100%"
-          width="100%"
-        />
+        {/* Rotating Gear Icon */}
+        <motion.div
+          initial={{ rotate: 0 }}
+          animate={{ rotate: 360 }}
+          transition={{ repeat: Infinity, duration: 6, ease: "linear" }}
+          className="text-6xl text-blue-500"
+        >
+          <FaCog />
+        </motion.div>
       </div>
 
+      {/* Main Content */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}

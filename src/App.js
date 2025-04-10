@@ -2,39 +2,47 @@ import React from "react";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Projects from "./components/Projects";
-import ContactForm from "./components/ContactForm"; // Import Contact Form component
-import Footer from "./components/Footer"; // Import Footer component
-import Navbar from "./components/Navbar"; // Import Navbar component
+import TechStack from "./components/TechStack";
+import ContactForm from "./components/ContactForm";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App bg-black text-white">
-      {/* Navbar Section - Fixed on top */}
-      <Navbar />
+    <div className="App relative bg-black text-white overflow-x-hidden">
+      {/* 🧭 Navbar Section - Fixed on top */}
+      <div className="relative z-10">
+        <Navbar />
 
-      {/* Hero Section - Main introduction */}
-      <section id="hero" className="pt-20 scroll-mt-20">
-        <Hero />
-      </section>
+        {/* 🎯 Hero Section */}
+        <section id="hero" className="pt-20 scroll-mt-20">
+          <Hero />
+        </section>
 
-      {/* About Section - Information about yourself */}
-      <section id="about" className="scroll-mt-20">
-        <About />
-      </section>
+        {/* 🙋‍♂️ About Section */}
+        <section id="about" className="scroll-mt-20">
+          <About />
+        </section>
 
-      {/* Projects Section - Showcase your projects */}
-      <section id="projects" className="scroll-mt-20">
-        <Projects />
-      </section>
+        {/* 🛠️ Tech Stack Section */}
+        <section id="techstack" className="scroll-mt-20">
+          <TechStack />
+        </section>
 
-      {/* Contact Form Section - Section where users can contact you */}
-      <section id="contact" className="scroll-mt-20">
-        <ContactForm /> {/* Contact Form for user queries */}
-      </section>
+        {/* 🚀 Projects Section */}
+        <section id="projects" className="scroll-mt-20">
+          <Projects />
+        </section>
 
-      {/* Footer Section - Additional links and information */}
-      <Footer />
+        {/* 📬 Contact Section */}
+        <section id="contact" className="scroll-mt-20">
+          <ContactForm />
+        </section>
+
+        {/* 🧾 Footer */}
+        <Footer />
+      </div>
     </div>
   );
 }

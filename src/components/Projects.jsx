@@ -1,6 +1,7 @@
 // src/components/Projects.jsx
 
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const projects = [
   {
@@ -26,17 +27,46 @@ const projects = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0 },
+};
+
 const Projects = () => {
   return (
-    <section className="bg-black py-16 px-6 text-white">
+    <motion.section
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.1 }}
+      variants={containerVariants}
+      className="bg-black py-16 px-6 text-white"
+    >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-teal-400 mb-10 text-center">
+        <motion.h2
+          className="text-4xl font-bold text-teal-400 mb-10 text-center"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+        >
           🚀 Projects
-        </h2>
+        </motion.h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={cardVariants}
+              whileHover={{ scale: 1.05, rotate: 0.5 }}
+              transition={{ type: 'spring', stiffness: 200 }}
               className="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-teal-400/50 transition duration-300"
             >
               <h3 className="text-2xl font-semibold mb-2 text-white">
@@ -61,11 +91,11 @@ const Projects = () => {
               >
                 View on GitHub →
               </a>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
