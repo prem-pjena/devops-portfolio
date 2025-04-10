@@ -14,7 +14,7 @@ const projects = [
     title: 'Express.js API on EC2 🔧',
     description:
       'Containerized an Express.js API, deployed via Terraform on EC2 with full CI/CD pipeline using GitHub Actions.',
-    link: 'https://github.com/prem-pjena/express-api-devops-deploy',
+    link: 'https://github.com/prem-pjena/express-api-devops',
     tags: ['Express', 'EC2', 'Docker', 'CI/CD'],
   },
   {
